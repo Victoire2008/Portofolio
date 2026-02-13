@@ -154,6 +154,8 @@
             position: relative;
             overflow: hidden;
             transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            margin-bottom: 1rem;
+            padding: 1rem;
         }
 
         .project-card::before {
@@ -184,24 +186,7 @@
             transform: scale(1.1);
         }
 
-        /* Skills Progress */
-        .skill-bar {
-            height: 8px;
-            background: rgba(159, 141, 195, 0.2);
-            border-radius: 10px;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .skill-progress {
-            height: 100%;
-            background: linear-gradient(90deg, var(--primary), var(--accent));
-            border-radius: 10px;
-            position: relative;
-            animation: shimmer 2s infinite;
-            background-size: 1000px 100%;
-        }
-
+    
         /* Navigation */
         nav {
             backdrop-filter: blur(20px);
@@ -236,6 +221,7 @@
             transition: all 0.3s;
             position: relative;
             overflow: hidden;
+            padding: 0.5rem 1rem;
         }
 
         .btn-primary::before {
@@ -300,6 +286,12 @@
             margin: 0 auto;
             border-radius: 10px;
         }
+
+        .glass {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
 
         /* ============================= */
 /* RESPONSIVE & MOBILE OPTIMISATION */
@@ -399,4 +391,36 @@
     .decorative-circle {
         display: none;
     }
+}
+
+/* Réduction des marges et paddings globaux */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Réduction des espaces dans les sections */
+section {
+    padding: 2rem 0; /* Réduction des espaces verticaux */
+}
+
+/* Réduction des espaces dans les cartes de projet */
+.project-card {
+    margin-bottom: 1rem; /* Réduction de l'espacement entre les cartes */
+    padding: 1rem; /* Réduction du padding interne */
+}
+
+/* Réduction des espaces dans les boutons */
+.btn-primary {
+    padding: 0.5rem 1rem; /* Réduction du padding interne */
+}
+
+/* Réduction des espaces dans les titres et paragraphes */
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0.5rem; /* Réduction de l'espacement sous les titres */
+}
+
+p {
+    margin-bottom: 0.75rem; /* Réduction de l'espacement sous les paragraphes */
 }
